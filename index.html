@@ -1,11 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ipsa Joshi</title>
-</head>
-<body>
-    <h1>Ipsa Joshi Portfolio</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <style>
+        /* Add a fixed position to the nav */
+        #desktop-nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: #fff; /* Change the background color as needed */
+          z-index: 1000; /* Ensure it's above other elements */
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+        }
+      
+        /* Add padding to the body to avoid content being hidden under the header */
+        body {
+          padding-top: 30px; /* Adjust the padding to match the height of your header */
+        }
+      
+        /* Optional: Style the logo and links */
+        .logo {
+          font-weight: bold;
+          padding: 5px 10px; /* Adjust the padding as needed */
+          font-size: 1.2em; /* Adjust the font size as needed */
+        }
+      
+        .nav-links {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      
+        .nav-links li {
+          padding: 5px 10px; /* Adjust the padding as needed */
+        }
+      
+        .nav-links li a {
+          text-decoration: none;
+          color: #333; /* Change the text color as needed */
+          font-size: 0.8em; /* Adjust the font size as needed */
+        }
+      
+        /* Optional: Change link color on hover */
+        .nav-links li a:hover {
+          color: #666; /* Change the hover color as needed */
+        }
+      </style>
+      
+      <nav id="desktop-nav">
+        <div class="logo">Ipsa Joshi</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- Add a placeholder to ensure content starts below the fixed header -->
+      <div style="height: 30px;"></div>
+      
+    <nav id="hamburger-nav">
+      <div class="logo">Ipsa Joshi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt="Ipsa Joshi profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ipsa Joshi</h1>
+        <p class="section__text__p2">Cyber Security Student</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/ipsajoshi/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/IpsaJoshi'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="text-container" style="text-align: center;">
+            <p style="font-size: 1.5em;">
+              Passionate Cybersecurity student at Seneca Polytechnic with hands-on experience in vulnerability assessment, penetration testing, and identity management. Former intern at BlackBerry, specializing in robotics. Experienced in Metasploit, Wireshark, Docker, AWS, and more. Dedicated to safeguarding digital infrastructure and integrating cybersecurity with robotics for cutting-edge solutions.
+            </p>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#education'"
+        />
+      </section>
+      
+      <section id="education" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1 class="section-title">Education</h1>
+        <div class="education">
+          <h3>Cyber Security and Threat Mgmt  </h3>
+          <p>Seneca College Graduate Certificate</p>
+          <p>Present </p>
+        </div>
+        <div class="education">
+          <h3> Cloud Architecture and Admin </h3>
+          <p>Seneca College Graduate Certificate</p>
+          <p>2023</p>
+        </div>
+        <div class="education">
+          <h3>B.E in Computer Engineering</h3>
+          <p>Gujarat Technological University</p>
+          <p>2022</p>
+        </div>
+      </section>
+      
+      
+      
+      <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Field Application Intern</h2>
+              <h3>BlackBerry</h3>
+              <p class="experience-timeline">Sep 2023 - Dec 2023</p>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">Embedded Software Engineer Intern</h2>
+              <h3>MOTION AUTOMOTIVE</h3>
+              <p class="experience-timeline">Jan 2022 - Apr 2022</p>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">Computer System Trainee</h2>
+              <h3>Reliance Industries Limited</h3>
+              <p class="experience-timeline">June 2021</p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        />
+      </section>
+      
+      
+      
+      
+    
+    
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:ipsa7777@gmail.com">ipsa7777@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Made by Ipsa Joshi</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
